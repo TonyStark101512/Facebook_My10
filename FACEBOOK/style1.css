@@ -1,0 +1,976 @@
+ /* Manage the Header Border  */
+ .header {
+    position: absolute;
+    border: 1px solid;
+    width: 1365px;
+    margin-left: -9px;
+    margin-top: -9px;
+    height: 55px;
+    opacity: 0.2;
+    background: white;
+}
+
+/* Manage the Facebook-logo in Header Content  */
+#Facebook-logo {
+    margin-top: -4px;
+    cursor: pointer;
+}
+
+/* Manage the search icon  */
+#Search-icon {
+    position: absolute;
+    margin: 12px 0 0 33px;
+    width: 16px;
+    opacity: 0.6;
+    border-radius: 33px;
+}
+
+/* Manage the Search icon border  */
+#border {
+    position: absolute;
+    margin: -46px 0 0 164px;
+    border: 1px solid rgb(235, 235, 235);
+    width: 40px;
+    height: 40px;
+    border-radius: 31px;
+    background-color: rgb(235, 235, 235);
+}
+
+#border:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+/* Manage the combine-notification  */
+.cover {
+    position: absolute;
+    margin-left: 1193px;
+    margin-top: -43px;
+    border-top: 1px solid rgb(227, 227, 227);
+    border-bottom: 1px solid rgb(227, 227, 227);
+    border-left: 1px solid rgb(227, 227, 227);
+    border-right: 1px solid rgb(227, 227, 227);
+    width: 42px;
+    height: 36px;
+    border-radius: 34px;
+    background: rgb(227, 227, 227);
+    cursor: pointer;
+}
+
+.cover1 {
+    position: absolute;
+    margin-left: 1244px;
+    margin-top: -43px;
+    border-top: 1px solid rgb(227, 227, 227);
+    border-bottom: 1px solid rgb(227, 227, 227);
+    border-left: 1px solid rgb(227, 227, 227);
+    border-right: 1px solid rgb(227, 227, 227);
+    width: 42px;
+    height: 36px;
+    border-radius: 32px;
+    background: rgb(227, 227, 227);
+    cursor: pointer;
+}
+
+#Massenger-logo {
+    position: absolute;
+    width: 24px;
+    margin-left: 8px;
+    margin-top: 4px;
+}
+
+.Message {
+    display: none;
+}
+
+.cover:hover .Message {
+    display: block;
+    position: absolute;
+    border: 1px solid;
+    margin-top: 49px;
+    width: 107px;
+    text-align: center;
+    margin-left: -31px;
+    background: black;
+    color: white;
+    height: 25px;
+    font-size: 20px;
+    border-radius: 6px;
+    font-family: math;
+    z-index: 8000;
+}
+
+
+#Notification-logo {
+    position: absolute;
+    width: 22px;
+    margin-top: 8px;
+    margin-left: 9px;
+    border-radius: 26px;
+}
+
+.Notification {
+    display: none;
+}
+
+.cover1:hover .Notification {
+    display: block;
+    position: absolute;
+    border: 1px solid;
+    margin-top: 49px;
+    width: 117px;
+    text-align: center;
+    margin-left: -37px;
+    background: black;
+    color: white;
+    height: 25px;
+    font-size: 20px;
+    border-radius: 6px;
+    font-family: math;
+    z-index: 8000;
+}
+
+.cover2 {
+    position: absolute;
+    margin-left: 1286px;
+    margin-top: -43px;
+    cursor: pointer;
+}
+
+#Profile {
+    position: absolute;
+    width: 42px;
+    height: 36px;
+    margin-top: 0;
+    margin-left: 9px;
+    border-radius: 32px;
+}
+
+.Account {
+    display: none;
+}
+
+.cover2:hover .Account {
+    display: block;
+    position: absolute;
+    border: 1px solid;
+    margin-top: 49px;
+    width: 93px;
+    text-align: center;
+    margin-left: -23px;
+    background: black;
+    color: white;
+    height: 25px;
+    font-size: 20px;
+    border-radius: 6px;
+    font-family: math;
+    z-index: 8000;
+}
+
+/* ------------------------------------------------------------------------------------------------------- */
+/* Manage the left side bar  */
+#L-side-Bar {
+    position: absolute;
+    border-right: 1px solid lightgray;
+    margin: 3px 0 0 -9px;
+    width: 56px;
+    height: 90vh;
+}
+
+/* Manage the Home icon  */
+#Home {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 57px;
+    margin: 7px 0 0 5px;
+}
+
+#Home:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+#Home:hover #label-101 {
+    display: block;
+    position: absolute;
+    margin-left: 59px;
+    margin-top: 9px;
+    border: 1px solid;
+    width: 70px;
+    text-align: center;
+    height: 24px;
+    font-size: 19px;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    z-index: 500;
+}
+
+#Home-icon {
+    position: absolute;
+    margin: 10px 0 0 9px;
+    border-radius: 24px;
+    cursor: pointer;
+    width: 27px;
+}
+
+#Home-icon:hover #label-101 {
+    display: block;
+    position: absolute;
+    margin-left: 59px;
+    margin-top: 9px;
+    border: 1px solid;
+    width: 70px;
+    text-align: center;
+    height: 24px;
+    font-size: 19px;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    z-index: 500;
+}
+
+#label-101 {
+    display: none;
+}
+
+/* Manage the Account  */
+#Account {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 57px;
+    margin: 53px 0 0 5px;
+}
+
+#Account:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+#Account:hover #label-102 {
+    display: block;
+    position: absolute;
+    margin-left: 59px;
+    margin-top: 9px;
+    border: 1px solid;
+    width: 90px;
+    text-align: center;
+    height: 24px;
+    font-size: 19px;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    z-index: 500;
+}
+
+#Account-icon {
+    position: absolute;
+    margin: 9px 0 0 9px;
+    border-radius: 24px;
+    cursor: pointer;
+    width: 27px;
+    height: 27px;
+}
+
+#Account-icon:hover #label-102 {
+    display: block;
+    position: absolute;
+    margin-left: 59px;
+    margin-top: 9px;
+    border: 1px solid;
+    width: 90px;
+    text-align: center;
+    height: 24px;
+    font-size: 19px;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    z-index: 500;
+}
+
+#label-102 {
+    display: none;
+}
+
+/* Manage the line of seperation  */
+#L1 {
+    position: absolute;
+    margin: 106px 0 0 5px;
+    width: 46px;
+    opacity: 0.5;
+}
+
+/* Manage the Watch icon  */
+#Watch {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 57px;
+    margin: 115px 0 0 5px;
+}
+
+#Watch:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+#Watch:hover #label-103 {
+    display: block;
+    position: absolute;
+    margin-left: 59px;
+    margin-top: 9px;
+    border: 1px solid;
+    width: 90px;
+    text-align: center;
+    height: 24px;
+    font-size: 19px;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    z-index: 500;
+}
+
+#Watch-icon {
+    position: absolute;
+    margin: 12px 0 0 9px;
+    border-radius: 24px;
+    cursor: pointer;
+    width: 27px;
+}
+
+#Watch-icon:hover #label-103 {
+    display: block;
+    position: absolute;
+    margin-left: 59px;
+    margin-top: 9px;
+    border: 1px solid;
+    width: 90px;
+    text-align: center;
+    height: 24px;
+    font-size: 19px;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    z-index: 500;
+}
+
+#label-103 {
+    display: none;
+}
+
+/* Manage the Contact */
+#Contact {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 57px;
+    margin: 163px 0 0 5px;
+}
+
+#Contact:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+#Contact:hover #label-104 {
+    display: block;
+    position: absolute;
+    margin-left: 59px;
+    margin-top: 9px;
+    border: 1px solid;
+    width: 90px;
+    text-align: center;
+    height: 24px;
+    font-size: 19px;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    z-index: 500;
+}
+
+#Contact-icon {
+    position: absolute;
+    margin: 12px 0 0 9px;
+    border-radius: 24px;
+    cursor: pointer;
+    width: 27px;
+}
+
+#Contact-icon:hover #label-104 {
+    display: block;
+    position: absolute;
+    margin-left: 59px;
+    margin-top: 9px;
+    border: 1px solid;
+    width: 90px;
+    text-align: center;
+    height: 24px;
+    font-size: 19px;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    z-index: 500;
+}
+
+#label-104 {
+    display: none;
+}
+
+/* Manage the Marketplace  */
+#Marketplace {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 57px;
+    margin: 211px 0 0 5px;
+}
+
+#Marketplace:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+#Marketplace:hover #label-105 {
+    display: block;
+    position: absolute;
+    margin-left: 59px;
+    margin-top: 9px;
+    border: 1px solid;
+    width: 110px;
+    text-align: center;
+    height: 24px;
+    font-size: 19px;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    z-index: 500;
+}
+
+#Marketplace-icon {
+    position: absolute;
+    margin: 12px 0 0 9px;
+    border-radius: 24px;
+    cursor: pointer;
+    width: 27px;
+}
+
+#Marketplace-icon:hover #label-105 {
+    display: block;
+    position: absolute;
+    margin-left: 59px;
+    margin-top: 9px;
+    border: 1px solid;
+    width: 110px;
+    text-align: center;
+    height: 24px;
+    font-size: 19px;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    z-index: 500;
+}
+
+#label-105 {
+    display: none;
+}
+
+/* Manage the Gaming  */
+#Gaming {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 57px;
+    margin: 259px 0 0 5px;
+}
+
+#Gaming:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+#Gaming:hover #label-106 {
+    display: block;
+    position: absolute;
+    margin-left: 59px;
+    margin-top: 9px;
+    border: 1px solid;
+    width: 90px;
+    text-align: center;
+    height: 24px;
+    font-size: 19px;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    z-index: 500;
+}
+
+#Gaming-icon {
+    position: absolute;
+    margin: 12px 0 0 9px;
+    border-radius: 24px;
+    cursor: pointer;
+    width: 27px;
+}
+
+#Gaming-icon:hover #label-106 {
+    display: block;
+    position: absolute;
+    margin-left: 59px;
+    margin-top: 9px;
+    border: 1px solid;
+    width: 90px;
+    text-align: center;
+    height: 24px;
+    font-size: 19px;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    z-index: 500;
+}
+
+#label-106 {
+    display: none;
+}
+
+/* Manage the See-all  */
+#See-all {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 57px;
+    margin: 307px 0 0 5px;
+}
+
+#See-all:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+#See-all:hover #label-107 {
+    display: block;
+    position: absolute;
+    margin-left: 59px;
+    margin-top: 9px;
+    border: 1px solid;
+    width: 90px;
+    text-align: center;
+    height: 24px;
+    font-size: 19px;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    z-index: 500;
+}
+
+#See-all-icon {
+    position: absolute;
+    margin: 9px 0 0 9px;
+    border-radius: 24px;
+    cursor: pointer;
+    width: 27px;
+}
+
+#See-all-icon:hover #label-107 {
+    display: block;
+    position: absolute;
+    margin-left: 59px;
+    margin-top: 9px;
+    border: 1px solid;
+    width: 90px;
+    text-align: center;
+    height: 24px;
+    font-size: 19px;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    z-index: 500;
+}
+
+#label-107 {
+    display: none;
+}
+
+/* Manage the line of seperation  */
+#L2 {
+    position: absolute;
+    margin: 362px 0 0 5px;
+    width: 46px;
+    opacity: 0.5;
+}
+
+/* Manage the Hashirama Senju */
+#Hashirama {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 57px;
+    margin: 374px 0 0 5px;
+}
+
+#Hashirama:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+#Hashirama:hover #label-108 {
+    display: block;
+    position: absolute;
+    margin-left: 59px;
+    margin-top: 9px;
+    border: 1px solid;
+    width: 120px;
+    text-align: center;
+    height: 24px;
+    font-size: 19px;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    z-index: 500;
+}
+
+#Hashirama-icon {
+    position: absolute;
+    margin: 9px 0 0 9px;
+    border-radius: 24px;
+    cursor: pointer;
+    width: 27px;
+    height: 27px;
+}
+
+#Hashirama-icon:hover #label-108 {
+    display: block;
+    position: absolute;
+    margin-left: 59px;
+    margin-top: 9px;
+    border: 1px solid;
+    width: 120px;
+    text-align: center;
+    height: 24px;
+    font-size: 19px;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    z-index: 500;
+}
+
+#label-108 {
+    display: none;
+}
+
+/* Manage the Itachi Uchiha */
+#Itachi {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 57px;
+    margin: 421px 0 0 5px;
+}
+
+#Itachi:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+#Itachi:hover #label-109 {
+    display: block;
+    position: absolute;
+    margin-left: 59px;
+    margin-top: 9px;
+    border: 1px solid;
+    width: 100px;
+    text-align: center;
+    height: 24px;
+    font-size: 19px;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    z-index: 500;
+}
+
+#Itachi-icon {
+    position: absolute;
+    margin: 9px 0 0 9px;
+    border-radius: 24px;
+    cursor: pointer;
+    width: 27px;
+    height: 27px;
+}
+
+#Itachi-icon:hover #label-109 {
+    display: block;
+    position: absolute;
+    margin-left: 59px;
+    margin-top: 9px;
+    border: 1px solid;
+    width: 100px;
+    text-align: center;
+    height: 24px;
+    font-size: 19px;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    z-index: 500;
+}
+
+#label-109 {
+    display: none;
+}
+
+/* Manage the Kakashi Hatake */
+#Kakashi {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 57px;
+    margin: 468px 0 0 5px;
+}
+
+#Kakashi:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+#Kakashi:hover #label-110 {
+    display: block;
+    position: absolute;
+    margin-left: 59px;
+    margin-top: 9px;
+    border: 1px solid;
+    width: 100px;
+    text-align: center;
+    height: 24px;
+    font-size: 19px;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    z-index: 500;
+}
+
+#Kakashi-icon {
+    position: absolute;
+    margin: 9px 0 0 9px;
+    border-radius: 24px;
+    cursor: pointer;
+    width: 27px;
+    height: 27px;
+}
+
+#Kakashi-icon:hover #label-110 {
+    display: block;
+    position: absolute;
+    margin-left: 59px;
+    margin-top: 9px;
+    border: 1px solid;
+    width: 100px;
+    text-align: center;
+    height: 24px;
+    font-size: 19px;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    z-index: 500;
+}
+
+#label-110 {
+    display: none;
+}
+
+
+/* Manage the line of seperation  */
+#L3 {
+    position: absolute;
+    margin: 518px 0 0 5px;
+    width: 46px;
+    opacity: 0.5;
+}
+
+/* Manage the Shortcuts */
+#Shortcuts {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 57px;
+    margin: 525px 0 0 5px;
+}
+
+#Shortcuts:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+#Shortcuts:hover #label-111 {
+    display: block;
+    position: absolute;
+    margin-left: 59px;
+    margin-top: 9px;
+    border: 1px solid;
+    width: 100px;
+    text-align: center;
+    height: 24px;
+    font-size: 19px;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    z-index: 500;
+}
+
+#Shortcuts-icon {
+    position: absolute;
+    margin: 9px 0 0 9px;
+    border-radius: 24px;
+    cursor: pointer;
+    width: 27px;
+    height: 27px;
+}
+
+#Shortcuts-icon:hover #label-111 {
+    display: block;
+    position: absolute;
+    margin-left: 59px;
+    margin-top: 9px;
+    border: 1px solid;
+    width: 100px;
+    text-align: center;
+    height: 24px;
+    font-size: 19px;
+    border-radius: 9px;
+    background-color: black;
+    color: white;
+    z-index: 500;
+}
+
+#label-111 {
+    display: none;
+}
+/* -------------------------------------------------------------------------------------------------------------- */
+/* Manage the middel-left side bar  */
+#MR-side-Bar {
+    position: absolute;
+    margin: 3px 0 0 47px;
+    width: 373px;
+    height: 90vh;
+    border-right: 1px solid lightgray;
+}
+/* Manage the line  */
+#line-1{
+    position: absolute;
+    margin: 76px 0 0 20px;
+    width: 331px;
+    opacity: 0.5;
+}
+/* Manage the outer hover body  */
+#round{
+    position: absolute;
+    margin: 21px 0 0 10px;
+    width: 29px;
+    height: 29px;
+    border-radius: 35px;
+}
+#round:hover{
+    background-color: rgb(225, 225, 225);
+    cursor: pointer;
+}
+/* Manage the arrow head  */
+#arrow-head{
+    position: absolute;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    width: 9px;
+    height: 9px;
+    margin: 9px 0 0 3px;
+    transform: rotate(45deg);
+}
+/* Manage the arrow body  */
+#arrow-body{
+    position: absolute;
+    margin: 14px 0 0 3px;
+    width: 20px;
+    color: black;
+}
+/* Manage the friends request  */
+#head-top{
+    position: absolute;
+    width: 148px;
+    font-size: 23px;
+    margin: 36px 0 0 55px;
+    font-family: fantasy;
+}
+/* Manage the small-head  */
+#small-head{
+    position: absolute;
+    font-size: 13px;
+    margin: 13px 0 0 57px;
+    opacity: 0.6;
+}
+#small-head:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+/* Manage the bottom-line  */
+#bottom-line{
+    position: absolute;
+    font-size: 20px;
+    margin: 86px 0 0 22px;
+    font-weight: 600;
+}
+/* Manage the inferior  */
+#inferior{
+    position: absolute;
+    font-size: 14px;
+    color: blue;
+    margin: 116px 0 0 23px;
+    cursor: pointer;
+}
+/* Manage the block-1  */
+#block-1{
+    position: absolute;
+    border: 1px solid;
+    margin: 151px 0 0 17px;
+    width: 338px;
+    height: 109px;
+    border-radius: 12px;
+    background-color: lightgray;
+}
+/* Manage the image  */
+#Gojo{
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border-radius: 41px;
+    margin: 6px 0 0 11px;
+}
+/* Manage the Confirm button  */
+#Confirm{
+
+}
+/* Manage the Delete button  */
+#Delete{
+    
+}
+/* -------------------------------------------------------------------------------------------------------------- */
+/* Manage the main-block  */
+#main-block {
+    border-left: 1px solid lightgray;
+    position: absolute;
+    margin: 4px 0 0 420px;
+    width: 936px;
+    height: 90vh;
+    background-color: rgb(242, 242, 242);
+    box-sizing: border-box;
+}
+/* Manage the image  */
+#people{
+    position: absolute;
+    margin: 175px 0 0 422px;
+}
+/* Manage the written mgs  */
+#written{
+    position: absolute;
+    font-size: 22px;
+    font-family: fantasy;
+    color: rgb(136, 136, 136);
+    margin: 300px 0 0 305px;
+}
+/* -------------------------------------------------------------------------------------------------------------- */

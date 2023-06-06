@@ -1,0 +1,3988 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends</title>
+    <link rel="icon" href="facebook-logo.png">
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        /* Manage the Header Border  */
+        .header {
+            position: absolute;
+            border: 1px solid;
+            width: 1365px;
+            margin-left: -9px;
+            margin-top: -9px;
+            height: 55px;
+            opacity: 0.2;
+            background: white;
+        }
+
+        /* Manage the Facebook-logo in Header Content  */
+        #Facebook-logo {
+            margin-top: -4px;
+            cursor: pointer;
+        }
+
+        /* Manage the search icon  */
+        #Search-icon {
+            position: absolute;
+            margin: 12px 0 0 33px;
+            width: 16px;
+            opacity: 0.6;
+            border-radius: 33px;
+        }
+
+        /* Manage the Search icon border  */
+        #border {
+            position: absolute;
+            margin: -46px 0 0 164px;
+            border: 1px solid rgb(235, 235, 235);
+            width: 40px;
+            height: 40px;
+            border-radius: 31px;
+            background-color: rgb(235, 235, 235);
+        }
+
+        #border:hover {
+            cursor: pointer;
+            background-color: lightgray;
+        }
+
+        /* Manage the combine-notification  */
+        .cover {
+            position: absolute;
+            margin-left: 1193px;
+            margin-top: -43px;
+            border-top: 1px solid rgb(227, 227, 227);
+            border-bottom: 1px solid rgb(227, 227, 227);
+            border-left: 1px solid rgb(227, 227, 227);
+            border-right: 1px solid rgb(227, 227, 227);
+            width: 42px;
+            height: 36px;
+            border-radius: 34px;
+            background: rgb(227, 227, 227);
+            cursor: pointer;
+        }
+
+        .cover1 {
+            position: absolute;
+            margin-left: 1244px;
+            margin-top: -43px;
+            border-top: 1px solid rgb(227, 227, 227);
+            border-bottom: 1px solid rgb(227, 227, 227);
+            border-left: 1px solid rgb(227, 227, 227);
+            border-right: 1px solid rgb(227, 227, 227);
+            width: 42px;
+            height: 36px;
+            border-radius: 32px;
+            background: rgb(227, 227, 227);
+            cursor: pointer;
+        }
+
+        #Massenger-logo {
+            position: absolute;
+            width: 24px;
+            margin-left: 8px;
+            margin-top: 4px;
+        }
+
+        .Message {
+            display: none;
+        }
+
+        .cover:hover .Message {
+            display: block;
+            position: absolute;
+            border: 1px solid;
+            margin-top: 49px;
+            width: 107px;
+            text-align: center;
+            margin-left: -31px;
+            background: black;
+            color: white;
+            height: 25px;
+            font-size: 20px;
+            border-radius: 6px;
+            font-family: math;
+            z-index: 8000;
+        }
+
+
+        #Notification-logo {
+            position: absolute;
+            width: 22px;
+            margin-top: 8px;
+            margin-left: 9px;
+            border-radius: 26px;
+        }
+
+        .Notification {
+            display: none;
+        }
+
+        .cover1:hover .Notification {
+            display: block;
+            position: absolute;
+            border: 1px solid;
+            margin-top: 49px;
+            width: 117px;
+            text-align: center;
+            margin-left: -37px;
+            background: black;
+            color: white;
+            height: 25px;
+            font-size: 20px;
+            border-radius: 6px;
+            font-family: math;
+            z-index: 8000;
+        }
+
+        .cover2 {
+            position: absolute;
+            margin-left: 1286px;
+            margin-top: -43px;
+            cursor: pointer;
+        }
+
+        #Profile {
+            position: absolute;
+            width: 42px;
+            height: 36px;
+            margin-top: 0;
+            margin-left: 9px;
+            border-radius: 32px;
+        }
+
+        .Account {
+            display: none;
+        }
+
+        .cover2:hover .Account {
+            display: block;
+            position: absolute;
+            border: 1px solid;
+            margin-top: 49px;
+            width: 93px;
+            text-align: center;
+            margin-left: -23px;
+            background: black;
+            color: white;
+            height: 25px;
+            font-size: 20px;
+            border-radius: 6px;
+            font-family: math;
+            z-index: 8000;
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the left side bar  */
+        #L-side-Bar {
+            position: absolute;
+            border-right: 1px solid lightgray;
+            margin: 3px 0 0 -9px;
+            width: 56px;
+            height: 90vh;
+        }
+
+        /* Manage the Home icon  */
+        #Home {
+            position: absolute;
+            width: 44px;
+            height: 44px;
+            border-radius: 57px;
+            margin: 7px 0 0 5px;
+        }
+
+        #Home:hover {
+            background-color: lightgray;
+            cursor: pointer;
+        }
+
+        #Home:hover #label-101 {
+            display: block;
+            position: absolute;
+            margin-left: 59px;
+            margin-top: 9px;
+            border: 1px solid;
+            width: 70px;
+            text-align: center;
+            height: 24px;
+            font-size: 19px;
+            border-radius: 9px;
+            background-color: black;
+            color: white;
+            z-index: 500;
+        }
+
+        #Home-icon {
+            position: absolute;
+            margin: 10px 0 0 9px;
+            border-radius: 24px;
+            cursor: pointer;
+            width: 27px;
+        }
+
+        #Home-icon:hover #label-101 {
+            display: block;
+            position: absolute;
+            margin-left: 59px;
+            margin-top: 9px;
+            border: 1px solid;
+            width: 70px;
+            text-align: center;
+            height: 24px;
+            font-size: 19px;
+            border-radius: 9px;
+            background-color: black;
+            color: white;
+            z-index: 500;
+        }
+
+        #label-101 {
+            display: none;
+        }
+
+        /* Manage the Account  */
+        #Account {
+            position: absolute;
+            width: 44px;
+            height: 44px;
+            border-radius: 57px;
+            margin: 53px 0 0 5px;
+        }
+
+        #Account:hover {
+            background-color: lightgray;
+            cursor: pointer;
+        }
+
+        #Account:hover #label-102 {
+            display: block;
+            position: absolute;
+            margin-left: 59px;
+            margin-top: 9px;
+            border: 1px solid;
+            width: 90px;
+            text-align: center;
+            height: 24px;
+            font-size: 19px;
+            border-radius: 9px;
+            background-color: black;
+            color: white;
+            z-index: 500;
+        }
+
+        #Account-icon {
+            position: absolute;
+            margin: 9px 0 0 9px;
+            border-radius: 24px;
+            cursor: pointer;
+            width: 27px;
+            height: 27px;
+        }
+
+        #Account-icon:hover #label-102 {
+            display: block;
+            position: absolute;
+            margin-left: 59px;
+            margin-top: 9px;
+            border: 1px solid;
+            width: 90px;
+            text-align: center;
+            height: 24px;
+            font-size: 19px;
+            border-radius: 9px;
+            background-color: black;
+            color: white;
+            z-index: 500;
+        }
+
+        #label-102 {
+            display: none;
+        }
+
+        /* Manage the line of seperation  */
+        #L1 {
+            position: absolute;
+            margin: 106px 0 0 5px;
+            width: 46px;
+            opacity: 0.5;
+        }
+
+        /* Manage the Watch icon  */
+        #Watch {
+            position: absolute;
+            width: 44px;
+            height: 44px;
+            border-radius: 57px;
+            margin: 115px 0 0 5px;
+        }
+
+        #Watch:hover {
+            background-color: lightgray;
+            cursor: pointer;
+        }
+
+        #Watch:hover #label-103 {
+            display: block;
+            position: absolute;
+            margin-left: 59px;
+            margin-top: 9px;
+            border: 1px solid;
+            width: 90px;
+            text-align: center;
+            height: 24px;
+            font-size: 19px;
+            border-radius: 9px;
+            background-color: black;
+            color: white;
+            z-index: 500;
+        }
+
+        #Watch-icon {
+            position: absolute;
+            margin: 12px 0 0 9px;
+            border-radius: 24px;
+            cursor: pointer;
+            width: 27px;
+        }
+
+        #Watch-icon:hover #label-103 {
+            display: block;
+            position: absolute;
+            margin-left: 59px;
+            margin-top: 9px;
+            border: 1px solid;
+            width: 90px;
+            text-align: center;
+            height: 24px;
+            font-size: 19px;
+            border-radius: 9px;
+            background-color: black;
+            color: white;
+            z-index: 500;
+        }
+
+        #label-103 {
+            display: none;
+        }
+
+        /* Manage the Contact */
+        #Contact {
+            position: absolute;
+            width: 44px;
+            height: 44px;
+            border-radius: 57px;
+            margin: 163px 0 0 5px;
+        }
+
+        #Contact:hover {
+            background-color: lightgray;
+            cursor: pointer;
+        }
+
+        #Contact:hover #label-104 {
+            display: block;
+            position: absolute;
+            margin-left: 59px;
+            margin-top: 9px;
+            border: 1px solid;
+            width: 90px;
+            text-align: center;
+            height: 24px;
+            font-size: 19px;
+            border-radius: 9px;
+            background-color: black;
+            color: white;
+            z-index: 500;
+        }
+
+        #Contact-icon {
+            position: absolute;
+            margin: 12px 0 0 9px;
+            border-radius: 24px;
+            cursor: pointer;
+            width: 27px;
+        }
+
+        #Contact-icon:hover #label-104 {
+            display: block;
+            position: absolute;
+            margin-left: 59px;
+            margin-top: 9px;
+            border: 1px solid;
+            width: 90px;
+            text-align: center;
+            height: 24px;
+            font-size: 19px;
+            border-radius: 9px;
+            background-color: black;
+            color: white;
+            z-index: 500;
+        }
+
+        #label-104 {
+            display: none;
+        }
+
+        /* Manage the Marketplace  */
+        #Marketplace {
+            position: absolute;
+            width: 44px;
+            height: 44px;
+            border-radius: 57px;
+            margin: 211px 0 0 5px;
+        }
+
+        #Marketplace:hover {
+            background-color: lightgray;
+            cursor: pointer;
+        }
+
+        #Marketplace:hover #label-105 {
+            display: block;
+            position: absolute;
+            margin-left: 59px;
+            margin-top: 9px;
+            border: 1px solid;
+            width: 110px;
+            text-align: center;
+            height: 24px;
+            font-size: 19px;
+            border-radius: 9px;
+            background-color: black;
+            color: white;
+            z-index: 500;
+        }
+
+        #Marketplace-icon {
+            position: absolute;
+            margin: 12px 0 0 9px;
+            border-radius: 24px;
+            cursor: pointer;
+            width: 27px;
+        }
+
+        #Marketplace-icon:hover #label-105 {
+            display: block;
+            position: absolute;
+            margin-left: 59px;
+            margin-top: 9px;
+            border: 1px solid;
+            width: 110px;
+            text-align: center;
+            height: 24px;
+            font-size: 19px;
+            border-radius: 9px;
+            background-color: black;
+            color: white;
+            z-index: 500;
+        }
+
+        #label-105 {
+            display: none;
+        }
+
+        /* Manage the Gaming  */
+        #Gaming {
+            position: absolute;
+            width: 44px;
+            height: 44px;
+            border-radius: 57px;
+            margin: 259px 0 0 5px;
+        }
+
+        #Gaming:hover {
+            background-color: lightgray;
+            cursor: pointer;
+        }
+
+        #Gaming:hover #label-106 {
+            display: block;
+            position: absolute;
+            margin-left: 59px;
+            margin-top: 9px;
+            border: 1px solid;
+            width: 90px;
+            text-align: center;
+            height: 24px;
+            font-size: 19px;
+            border-radius: 9px;
+            background-color: black;
+            color: white;
+            z-index: 500;
+        }
+
+        #Gaming-icon {
+            position: absolute;
+            margin: 12px 0 0 9px;
+            border-radius: 24px;
+            cursor: pointer;
+            width: 27px;
+        }
+
+        #Gaming-icon:hover #label-106 {
+            display: block;
+            position: absolute;
+            margin-left: 59px;
+            margin-top: 9px;
+            border: 1px solid;
+            width: 90px;
+            text-align: center;
+            height: 24px;
+            font-size: 19px;
+            border-radius: 9px;
+            background-color: black;
+            color: white;
+            z-index: 500;
+        }
+
+        #label-106 {
+            display: none;
+        }
+
+        /* Manage the See-all  */
+        #See-all {
+            position: absolute;
+            width: 44px;
+            height: 44px;
+            border-radius: 57px;
+            margin: 307px 0 0 5px;
+        }
+
+        #See-all:hover {
+            background-color: lightgray;
+            cursor: pointer;
+        }
+
+        #See-all:hover #label-107 {
+            display: block;
+            position: absolute;
+            margin-left: 59px;
+            margin-top: 9px;
+            border: 1px solid;
+            width: 90px;
+            text-align: center;
+            height: 24px;
+            font-size: 19px;
+            border-radius: 9px;
+            background-color: black;
+            color: white;
+            z-index: 500;
+        }
+
+        #See-all-icon {
+            position: absolute;
+            margin: 9px 0 0 9px;
+            border-radius: 24px;
+            cursor: pointer;
+            width: 27px;
+        }
+
+        #See-all-icon:hover #label-107 {
+            display: block;
+            position: absolute;
+            margin-left: 59px;
+            margin-top: 9px;
+            border: 1px solid;
+            width: 90px;
+            text-align: center;
+            height: 24px;
+            font-size: 19px;
+            border-radius: 9px;
+            background-color: black;
+            color: white;
+            z-index: 500;
+        }
+
+        #label-107 {
+            display: none;
+        }
+
+        /* Manage the line of seperation  */
+        #L2 {
+            position: absolute;
+            margin: 362px 0 0 5px;
+            width: 46px;
+            opacity: 0.5;
+        }
+
+        /* Manage the Hashirama Senju */
+        #Hashirama {
+            position: absolute;
+            width: 44px;
+            height: 44px;
+            border-radius: 57px;
+            margin: 374px 0 0 5px;
+        }
+
+        #Hashirama:hover {
+            background-color: lightgray;
+            cursor: pointer;
+        }
+
+        #Hashirama:hover #label-108 {
+            display: block;
+            position: absolute;
+            margin-left: 59px;
+            margin-top: 9px;
+            border: 1px solid;
+            width: 120px;
+            text-align: center;
+            height: 24px;
+            font-size: 19px;
+            border-radius: 9px;
+            background-color: black;
+            color: white;
+            z-index: 500;
+        }
+
+        #Hashirama-icon {
+            position: absolute;
+            margin: 9px 0 0 9px;
+            border-radius: 24px;
+            cursor: pointer;
+            width: 27px;
+            height: 27px;
+        }
+
+        #Hashirama-icon:hover #label-108 {
+            display: block;
+            position: absolute;
+            margin-left: 59px;
+            margin-top: 9px;
+            border: 1px solid;
+            width: 120px;
+            text-align: center;
+            height: 24px;
+            font-size: 19px;
+            border-radius: 9px;
+            background-color: black;
+            color: white;
+            z-index: 500;
+        }
+
+        #label-108 {
+            display: none;
+        }
+
+        /* Manage the Itachi Uchiha */
+        #Itachi {
+            position: absolute;
+            width: 44px;
+            height: 44px;
+            border-radius: 57px;
+            margin: 421px 0 0 5px;
+        }
+
+        #Itachi:hover {
+            background-color: lightgray;
+            cursor: pointer;
+        }
+
+        #Itachi:hover #label-109 {
+            display: block;
+            position: absolute;
+            margin-left: 59px;
+            margin-top: 9px;
+            border: 1px solid;
+            width: 100px;
+            text-align: center;
+            height: 24px;
+            font-size: 19px;
+            border-radius: 9px;
+            background-color: black;
+            color: white;
+            z-index: 500;
+        }
+
+        #Itachi-icon {
+            position: absolute;
+            margin: 9px 0 0 9px;
+            border-radius: 24px;
+            cursor: pointer;
+            width: 27px;
+            height: 27px;
+        }
+
+        #Itachi-icon:hover #label-109 {
+            display: block;
+            position: absolute;
+            margin-left: 59px;
+            margin-top: 9px;
+            border: 1px solid;
+            width: 100px;
+            text-align: center;
+            height: 24px;
+            font-size: 19px;
+            border-radius: 9px;
+            background-color: black;
+            color: white;
+            z-index: 500;
+        }
+
+        #label-109 {
+            display: none;
+        }
+
+        /* Manage the Kakashi Hatake */
+        #Kakashi {
+            position: absolute;
+            width: 44px;
+            height: 44px;
+            border-radius: 57px;
+            margin: 468px 0 0 5px;
+        }
+
+        #Kakashi:hover {
+            background-color: lightgray;
+            cursor: pointer;
+        }
+
+        #Kakashi:hover #label-110 {
+            display: block;
+            position: absolute;
+            margin-left: 59px;
+            margin-top: 9px;
+            border: 1px solid;
+            width: 100px;
+            text-align: center;
+            height: 24px;
+            font-size: 19px;
+            border-radius: 9px;
+            background-color: black;
+            color: white;
+            z-index: 500;
+        }
+
+        #Kakashi-icon {
+            position: absolute;
+            margin: 9px 0 0 9px;
+            border-radius: 24px;
+            cursor: pointer;
+            width: 27px;
+            height: 27px;
+        }
+
+        #Kakashi-icon:hover #label-110 {
+            display: block;
+            position: absolute;
+            margin-left: 59px;
+            margin-top: 9px;
+            border: 1px solid;
+            width: 100px;
+            text-align: center;
+            height: 24px;
+            font-size: 19px;
+            border-radius: 9px;
+            background-color: black;
+            color: white;
+            z-index: 500;
+        }
+
+        #label-110 {
+            display: none;
+        }
+
+
+        /* Manage the line of seperation  */
+        #L3 {
+            position: absolute;
+            margin: 518px 0 0 5px;
+            width: 46px;
+            opacity: 0.5;
+        }
+
+        /* Manage the Shortcuts */
+        #Shortcuts {
+            position: absolute;
+            width: 44px;
+            height: 44px;
+            border-radius: 57px;
+            margin: 525px 0 0 5px;
+        }
+
+        #Shortcuts:hover {
+            background-color: lightgray;
+            cursor: pointer;
+        }
+
+        #Shortcuts:hover #label-111 {
+            display: block;
+            position: absolute;
+            margin-left: 59px;
+            margin-top: 9px;
+            border: 1px solid;
+            width: 100px;
+            text-align: center;
+            height: 24px;
+            font-size: 19px;
+            border-radius: 9px;
+            background-color: black;
+            color: white;
+            z-index: 500;
+        }
+
+        #Shortcuts-icon {
+            position: absolute;
+            margin: 9px 0 0 9px;
+            border-radius: 24px;
+            cursor: pointer;
+            width: 27px;
+            height: 27px;
+        }
+
+        #Shortcuts-icon:hover #label-111 {
+            display: block;
+            position: absolute;
+            margin-left: 59px;
+            margin-top: 9px;
+            border: 1px solid;
+            width: 100px;
+            text-align: center;
+            height: 24px;
+            font-size: 19px;
+            border-radius: 9px;
+            background-color: black;
+            color: white;
+            z-index: 500;
+        }
+
+        #label-111 {
+            display: none;
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the middel-left side bar  */
+        #MR-side-Bar {
+            position: absolute;
+            margin: 3px 0 0 47px;
+            width: 373px;
+            height: 90vh;
+            border-right: 1px solid lightgray;
+        }
+
+        /* Manage the titel  */
+        #Friends {
+            position: absolute;
+            margin: 10px 0 0 16px;
+            width: 86px;
+            height: 23px;
+            font-size: 29px;
+            font-weight: 600;
+            cursor: grab;
+        }
+
+        /* Manage the setting icon  */
+        #setting {
+            position: absolute;
+            margin: 11px 0 0 326px;
+            cursor: pointer;
+        }
+
+        /* ----------------------------------------------------------------------------------------------------- */
+        /* Manage the Home  */
+        #Block-1 {
+            position: absolute;
+            border: none;
+            margin: 61px 0 0 16px;
+            width: 338px;
+            height: 43px;
+            background-color: rgb(238, 238, 238);
+        }
+
+        #pic-1 {
+            position: absolute;
+            margin: 6px 0 0 12px;
+            width: 38px;
+            border-radius: 27px;
+        }
+
+        #B-1 {
+            position: absolute;
+            margin: 6px 0 0 58px;
+            font-size: 21px;
+            font-family: system-ui;
+        }
+
+        #Block-1:hover {
+            background-color: lightgray;
+            cursor: pointer;
+        }
+
+        /* ------------------------------------------------------------------------------------------------------ */
+        /* Manage the Friends request */
+        #Block-2 {
+            position: absolute;
+            margin: 113px 0 0 16px;
+            width: 338px;
+            height: 43px;
+        }
+
+        #user {
+            position: absolute;
+            width: 24px;
+            margin: 3px 0 0 7px;
+        }
+
+        #B-2 {
+            position: absolute;
+            margin: 6px 0 0 58px;
+            font-size: 21px;
+            font-family: system-ui;
+            color: black;
+        }
+
+        #circle {
+            position: absolute;
+            border: 1px solid rgb(238, 238, 238);
+            width: 38px;
+            height: 38px;
+            margin: 1px 0 0 10px;
+            border-radius: 49px;
+            background-color: rgb(238, 238, 238);
+        }
+
+        #angular {
+            position: absolute;
+            margin: 16px 0 0 310px;
+            width: 10px;
+            height: 10px;
+            transform: rotate(45deg);
+            border-right: 1px solid black;
+            border-top: 1px solid black;
+        }
+
+        .dash {
+            position: absolute;
+            width: 6px;
+            margin: 16.1px 0 0 38px;
+            color: black;
+        }
+
+        #arrow-frd {
+            position: absolute;
+            margin: 14px 0 0 42px;
+            width: 3px;
+            height: 3px;
+            transform: rotate(45deg);
+            border-right: 1px solid black;
+            border-top: 1px solid black;
+        }
+
+        #Block-2:hover {
+            background-color: rgb(238, 238, 238);
+            cursor: pointer;
+        }
+
+        /* ------------------------------------------------------------------------------------------------------ */
+        /* Manage the Suggestion */
+        #Block-3 {
+            position: absolute;
+            margin: 165px 0 0 16px;
+            width: 338px;
+            height: 43px;
+        }
+
+        #circle-1 {
+            position: absolute;
+            border: 1px solid rgb(238, 238, 238);
+            width: 38px;
+            height: 38px;
+            margin: 1px 0 0 10px;
+            border-radius: 49px;
+            background-color: rgb(238, 238, 238);
+        }
+
+        #user-1 {
+            position: absolute;
+            width: 24px;
+            margin: 3px 0 0 7px;
+        }
+
+        #B-3 {
+            position: absolute;
+            margin: 6px 0 0 58px;
+            font-size: 21px;
+            font-family: system-ui;
+            color: black;
+        }
+
+        #angular-1 {
+            position: absolute;
+            margin: 16px 0 0 310px;
+            width: 10px;
+            height: 10px;
+            transform: rotate(45deg);
+            border-right: 1px solid black;
+            border-top: 1px solid black;
+        }
+
+        #Block-3:hover {
+            background-color: rgb(238, 238, 238);
+            cursor: pointer;
+        }
+
+        #plus {
+            position: absolute;
+            margin: 9px 0 0 39px;
+        }
+
+        /* ------------------------------------------------------------------------------------------------------ */
+        /* Manage the All Friends */
+        #Block-4 {
+            position: absolute;
+            margin: 217px 0 0 16px;
+            width: 338px;
+            height: 43px;
+        }
+
+        #circle-2 {
+            position: absolute;
+            border: 1px solid rgb(238, 238, 238);
+            width: 38px;
+            height: 38px;
+            margin: 1px 0 0 10px;
+            border-radius: 49px;
+            background-color: rgb(238, 238, 238);
+        }
+
+        #user-2 {
+            position: absolute;
+            width: 24px;
+            margin: 3px 0 0 7px;
+        }
+
+        #B-4 {
+            position: absolute;
+            margin: 6px 0 0 58px;
+            font-size: 21px;
+            font-family: system-ui;
+            color: black;
+        }
+
+        #angular-2 {
+            position: absolute;
+            margin: 16px 0 0 310px;
+            width: 10px;
+            height: 10px;
+            transform: rotate(45deg);
+            border-right: 1px solid black;
+            border-top: 1px solid black;
+        }
+
+        #top-line {
+            position: absolute;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            margin: 12px 0 0 40px;
+            width: 6px;
+            height: 1px;
+        }
+
+        #bottom-line {
+            position: absolute;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            margin: 16px 0 0 40px;
+            width: 6px;
+            height: 1px;
+        }
+
+        #Block-4:hover {
+            background-color: rgb(238, 238, 238);
+            cursor: pointer;
+        }
+
+        /* ------------------------------------------------------------------------------------------------------ */
+        /* Manage the Birthday */
+        #Block-5 {
+            position: absolute;
+            margin: 269px 0 0 16px;
+            width: 338px;
+            height: 43px;
+        }
+
+        #circle-3 {
+            position: absolute;
+            border: 1px solid rgb(238, 238, 238);
+            width: 38px;
+            height: 38px;
+            margin: 1px 0 0 10px;
+            border-radius: 49px;
+            background-color: rgb(238, 238, 238);
+        }
+
+        #user-3 {
+            position: absolute;
+            width: 24px;
+            margin: 3px 0 0 7px;
+        }
+
+        #B-5 {
+            position: absolute;
+            margin: 6px 0 0 58px;
+            font-size: 21px;
+            font-family: system-ui;
+            color: black;
+        }
+
+        #Block-5:hover {
+            background-color: rgb(238, 238, 238);
+            cursor: pointer;
+        }
+
+        /* ------------------------------------------------------------------------------------------------------ */
+        /* Manage the Custom list */
+        #Block-6 {
+            position: absolute;
+            margin: 321px 0 0 16px;
+            width: 338px;
+            height: 43px;
+        }
+
+        #circle-4 {
+            position: absolute;
+            border: 1px solid rgb(238, 238, 238);
+            width: 38px;
+            height: 38px;
+            margin: 1px 0 0 10px;
+            border-radius: 49px;
+            background-color: rgb(238, 238, 238);
+        }
+
+        #user-4 {
+            position: absolute;
+            width: 24px;
+            margin: 3px 0 0 7px;
+        }
+
+        #B-6 {
+            position: absolute;
+            margin: 6px 0 0 58px;
+            font-size: 21px;
+            font-family: system-ui;
+            color: black;
+        }
+
+        #angular-4 {
+            position: absolute;
+            margin: 16px 0 0 310px;
+            width: 10px;
+            height: 10px;
+            transform: rotate(45deg);
+            border-right: 1px solid black;
+            border-top: 1px solid black;
+        }
+
+        #top-line-1 {
+            position: absolute;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            margin: 12px 0 0 40px;
+            width: 6px;
+            height: 1px;
+        }
+
+        #bottom-line-1 {
+            position: absolute;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            margin: 16px 0 0 40px;
+            width: 6px;
+            height: 1px;
+        }
+
+        #Block-6:hover {
+            background-color: rgb(238, 238, 238);
+            cursor: pointer;
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the main-block  */
+        #main-block {
+            border-left: 1px solid lightgray;
+            position: absolute;
+            margin: 4px 0 0 420px;
+            width: 936px;
+            height: 90vh;
+            background-color: rgb(242, 242, 242);
+            box-sizing: border-box;
+            overflow: hidden;
+            /* It is used to hide the extra things overflowing from any container */
+            overflow-y: scroll;
+            /* ITt is used to show the hidden content which is overflowing */
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the heading-1 */
+        #heading-1 {
+            position: absolute;
+            margin: 21px 0 0 19px;
+            font-size: 26px;
+            font-family: system-ui;
+            color: black;
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-1 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 73px 0 0 24px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-1 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-1 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-1:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(43, 43, 249);
+            color: #fff;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate:hover {
+            background-color: blue;
+        }
+
+        /* Manage the delete button  */
+        #naah {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #naah:hover {
+            background-color: lightgray;
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-2 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 73px 0 0 283px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-2 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-2 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-2:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-1 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(43, 43, 249);
+            color: #fff;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-1:hover {
+            background-color: blue;
+        }
+
+        /* Manage the delete button  */
+        #naah-1 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #naah-1:hover {
+            background-color: lightgray;
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-3 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 73px 0 0 542px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-3 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-3 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-3:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-2 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(43, 43, 249);
+            color: #fff;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-2:hover {
+            background-color: blue;
+        }
+
+        /* Manage the delete button  */
+        #naah-2 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #naah-2:hover {
+            background-color: lightgray;
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the line of seperation */
+        #rekha {
+            position: absolute;
+            width: 864px;
+            margin: 480px 0 0 25px;
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the heading-2  */
+        #heading-2 {
+            position: absolute;
+            margin: 493px 0 0 19px;
+            font-size: 26px;
+            font-family: system-ui;
+            color: black;
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-4 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 546px 0 0 24px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-4 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-4 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-4:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-3 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-3:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-3 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-3:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-5 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 546px 0 0 322px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-5 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-5 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-5:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-4 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-4:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-4 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-4:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-6 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 546px 0 0 626px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-6 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-6 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-6:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-5 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-5:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-5 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-5:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-7 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 960px 0 0 24px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-7 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-7 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-7:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-6 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-6:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-6 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-6:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-8 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 960px 0 0 322px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-8 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-8 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-8:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-7 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-7:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-7 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-7:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-9 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 960px 0 0 626px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-9 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-9 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-9:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-8 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-8:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-8 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-8:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-10 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 1374px 0 0 24px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-10 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-10 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-10:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-9 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-9:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-9 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-9:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-11 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 1374px 0 0 322px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-11 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-11 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-11:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-10 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-10:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-10 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-10:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-12 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 1374px 0 0 626px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-12 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-12 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-12:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-11 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-11:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-11 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-11:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-13 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 1788px 0 0 24px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-13 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-13 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-13:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-12 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-12:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-12 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-12:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-14 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 1788px 0 0 322px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-14 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-14 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-14:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-13 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-13:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-13 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-13:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-15 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 1788px 0 0 626px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-15 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-15 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-15:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-14 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-14:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-14 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-14:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-16 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 2202px 0 0 24px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-16 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-16 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-16:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-15 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-15:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-15 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-15:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-17 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 2202px 0 0 322px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-17 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-17 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-17:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-16 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-16:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-16 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-16:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-18 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 2202px 0 0 626px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-18 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-18 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-18:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-17 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-17:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-17 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-17:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-19 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 2616px 0 0 24px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-19 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-19 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-19:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-18 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-18:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-18 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-18:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-20 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 2616px 0 0 322px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-20 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-20 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-20:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-19 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-19:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-19 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-19:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-21 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 2616px 0 0 626px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-21 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-21 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-21:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-20 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-20:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-20 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-20:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-22 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 3030px 0 0 24px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-22 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-22 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-22:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-21 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-21:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-21 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-21:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-23 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 3030px 0 0 322px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-23 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-23 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-23:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-22 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-22:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-22 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-22:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-24 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 3030px 0 0 626px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-24 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-24 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-24:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-23 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-23:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-23 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-23:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-25 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 3444px 0 0 24px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-25 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-25 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-25:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-24 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-24:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-24 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-24:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-26 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 3444px 0 0 322px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-26 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-26 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-26:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-25 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-25:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-25 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-25:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-27 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 3444px 0 0 626px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-27 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-27 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-27:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-26 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-26:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-26 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-26:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-28 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 3858px 0 0 24px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-28 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-28 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-28:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-27 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-27:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-27 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-27:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-29 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 3858px 0 0 322px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-29 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-29 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-29:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-28 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-28:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-28 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-28:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-30 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 3858px 0 0 626px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-30 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-30 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-30:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-29 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-29:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-29 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-29:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-31 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 4272px 0 0 24px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-31 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-31 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-31:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-30 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-30:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-30 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-30:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-32 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 4272px 0 0 322px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-32 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-32 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-32:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-31 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-31:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-31 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-31:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+        /* Manage the Friends requests accounts */
+        #bilagra-33 {
+            position: absolute;
+            border: 1px solid lightgray;
+            margin: 4272px 0 0 626px;
+            width: 242px;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        /* Manage the image in the div  */
+        #ambrodil-33 {
+            position: absolute;
+            width: 242px;
+            height: 257px;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* Manage the name of the account owner  */
+        #naam-33 {
+            position: absolute;
+            margin: 266px 0 0 15px;
+            font-size: 20px;
+        }
+
+        #naam-33:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Manage the confirm button  */
+        #vagaate-32 {
+            position: absolute;
+            margin: 308px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            background-color: rgb(212, 212, 212);
+            color: rgb(43, 43, 249);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #vagaate-32:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* Manage the delete button  */
+        #naah-32 {
+            position: absolute;
+            margin: 345px 0 0 14px;
+            width: 207px;
+            height: 30px;
+            border-radius: 9px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: rgb(212, 212, 212);
+        }
+
+        #naah-32:hover {
+            background-color: rgb(197, 197, 197);
+        }
+
+        /* ------------------------------------------------------------------------------------------------------- */
+    </style>
+</head>
+
+<body>
+    <!-- Construction of Header+Border  -->
+    <div class="header"></div>
+
+    <!-- Construction of Facebook logo  -->
+    <a href="https://www.facebook.com/"><img src="facebook-logo-1.png" alt="Facebook-logo" id="Facebook-logo"></a>
+
+    <!-- Construction of search-icon  -->
+    <div id="border"></div>
+    <img src="sreach (3).png" alt="search-icon" id="Search-icon">
+
+    <!-- Construction of combine-notification  -->
+    <div class="cover"><img src="Massenger-logo.png" id="Massenger-logo">
+        <div class="Message">Messenger</div>
+    </div>
+
+    <div class="cover1"><img src="Notification-logo.png" id="Notification-logo">
+        <div class="Notification">Notification</div>
+    </div>
+
+    <div class="cover2"><img src="WALLPAPER.png" id="Profile">
+        <div class="Account">Account</div>
+    </div>
+
+    <!-- Construction of left-side-bar  -->
+    <div id="L-side-Bar">
+
+        <!-- Construction of Home icon  -->
+        <div id="Home">
+            <img src="Home.png" id="Home-icon">
+            <span id="label-101">Home</span>
+        </div>
+
+        <!-- Construction of Account icon  -->
+        <div id="Account">
+            <img src="WALLPAPER.png" id="Account-icon">
+            <span id="label-102">Account</span>
+        </div>
+
+        <!-- Construction of line of seperation  -->
+        <hr id="L1">
+
+        <!-- Construction of Watch icon  -->
+        <div id="Watch">
+            <img src="video.png" id="Watch-icon">
+            <span id="label-103">Watch</span>
+        </div>
+
+        <!-- Construction of Contact icon  -->
+        <div id="Contact">
+            <img src="Contact.png" id="Contact-icon">
+            <span id="label-104">Contact</span>
+        </div>
+
+        <!-- Construction of Marketplace icon  -->
+        <div id="Marketplace">
+            <img src="Market-icon.png" id="Marketplace-icon">
+            <span id="label-105">Marketplace</span>
+        </div>
+
+        <!-- Construction of Gaming icon  -->
+        <div id="Gaming">
+            <img src="Game-pad.png" id="Gaming-icon">
+            <span id="label-106">Gaming</span>
+        </div>
+
+        <!-- Construction of See-all icon  -->
+        <div id="See-all">
+            <img src="See-all.png" id="See-all-icon">
+            <span id="label-107">See All</span>
+        </div>
+
+        <!-- Construction of line of seperation  -->
+        <hr id="L2">
+
+        <!-- Construction of Hashirama senju  -->
+        <div id="Hashirama">
+            <img src="Hashirama Senju.jpg" id="Hashirama-icon">
+            <span id="label-108">Hashirama</span>
+        </div>
+
+        <!-- Construction of Itachi Uchiha  -->
+        <div id="Itachi">
+            <img src="Nagato.jpg" id="Itachi-icon">
+            <span id="label-109">Nagato</span>
+        </div>
+
+        <!-- Construction of Kakashi Hatake  -->
+        <div id="Kakashi">
+            <img src="Kakashi Hatake.png" id="Kakashi-icon">
+            <span id="label-110">Kakashi</span>
+        </div>
+
+        <!-- Construction of line of seperation  -->
+        <hr id="L3">
+
+        <!-- Construction of Shortcuts  -->
+        <div id="Shortcuts">
+            <img src="short-cut.png" id="Shortcuts-icon">
+            <span id="label-111">Shortcuts</span>
+        </div>
+    </div>
+
+    <!-- Construction of middel-left side-bar  -->
+    <div id="MR-side-Bar">
+
+        <!-- Construction of titel  -->
+        <span id="Friends">Friends</span>
+        <img src="setting.png" id="setting">
+
+        <!-- Construction of Home icon  -->
+        <div id="Block-1">
+            <img src="Contact.png" id="pic-1">
+            <span id="B-1">Home</span>
+        </div>
+
+        <!-- Construction of Friends request  -->
+        <div id="Block-2">
+
+            <div id="circle">
+                <img src="user.svg" id="user">
+            </div>
+
+            <span id="B-2">Friends requests</span>
+
+            <div id="angular"></div>
+
+            <hr class="dash">
+            <div id="arrow-frd"></div>
+        </div>
+
+        <!-- Construction of Suggestion  -->
+        <div id="Block-3">
+            <div id="circle-1">
+                <img src="user.svg" id="user-1">
+            </div>
+            <span id="B-3">Suggestion</span>
+
+            <div id="angular-1"></div>
+
+            <span id="plus">+</span>
+        </div>
+
+        <!-- Construction of All Friends  -->
+        <div id="Block-4">
+            <div id="circle-2">
+                <img src="user.svg" id="user-2">
+            </div>
+            <span id="B-4">All Friends</span>
+
+            <div id="angular-2"></div>
+
+            <div id="top-line"></div>
+            <div id="bottom-line"></div>
+        </div>
+
+        <!-- Construction of Birthday  -->
+        <div id="Block-5">
+            <div id="circle-3">
+                <img src="gift.svg" id="user-3">
+            </div>
+            <span id="B-5">Birthdays</span>
+
+        </div>
+
+        <!-- Construction of Custom list  -->
+        <div id="Block-6">
+            <div id="circle-4">
+                <img src="user.svg" id="user-4">
+            </div>
+            <span id="B-6">Custom lists</span>
+
+            <div id="angular-4"></div>
+
+            <div id="top-line-1"></div>
+            <div id="bottom-line-1"></div>
+        </div>
+
+    </div>
+
+    <!-- Construction of main-block  -->
+    <div id="main-block">
+
+        <!-- Construction of Heading-1 -->
+        <h2 id="heading-1">Friend requests</h2>
+
+        <!-- Construction of Friends requests accounts -->
+        <div id="bilagra-1">
+            <img src="Hashirama Senju.jpg" id="ambrodil-1">
+            <span id="naam-1">Hashirama Senju</span>
+            <button id="vagaate">Confirm</button>
+            <button id="naah">Delete</button>
+        </div>
+
+        <div id="bilagra-2">
+            <img src="Kabuto Yakushi.jpg" id="ambrodil-2">
+            <span id="naam-2">Kabuto Yakushi</span>
+            <button id="vagaate-1">Confirm</button>
+            <button id="naah-1">Delete</button>
+        </div>
+
+        <div id="bilagra-3">
+            <img src="Gara.jpg" id="ambrodil-3">
+            <span id="naam-3">Gara</span>
+            <button id="vagaate-2">Confirm</button>
+            <button id="naah-2">Delete</button>
+        </div>
+
+        <!-- Construction of line seperation -->
+        <hr id="rekha">
+
+        <!-- Construction of Heading-2  -->
+        <h2 id="heading-2">pepole you may know</h2>
+
+        <div id="bilagra-4">
+            <img src="Hinata Hyuga.jpg" id="ambrodil-4">
+            <span id="naam-4">Hinata Hyuga</span>
+            <button id="vagaate-3">Add Friend</button>
+            <button id="naah-3">Remove</button>
+        </div>
+
+
+        <div id="bilagra-5">
+            <img src="Nagato.jpg" id="ambrodil-5">
+            <span id="naam-5">Nagato</span>
+            <button id="vagaate-4">Add Friend</button>
+            <button id="naah-4">Remove</button>
+        </div>
+
+        <div id="bilagra-6">
+            <img src="Konohamaru Sarutobi.jpg" id="ambrodil-6">
+            <span id="naam-6">Konohamaru Sarutobi</span>
+            <button id="vagaate-5">Add Friend</button>
+            <button id="naah-5">Remove</button>
+        </div>
+
+        <div id="bilagra-7">
+            <img src="Madara-Uchiha.jpg" id="ambrodil-7">
+            <span id="naam-7">Madara Uchiha</span>
+            <button id="vagaate-6">Add Friend</button>
+            <button id="naah-6">Remove</button>
+        </div>
+
+        <div id="bilagra-8">
+            <img src="Naruto Uzumaki.jpg" id="ambrodil-8">
+            <span id="naam-8">Naruto Uzumaki</span>
+            <button id="vagaate-7">Add Friend</button>
+            <button id="naah-7">Remove</button>
+        </div>
+
+        <div id="bilagra-9">
+            <img src="Neji Hyuga.jpg" id="ambrodil-9">
+            <span id="naam-9">Neji Hyuga</span>
+            <button id="vagaate-8">Add Friend</button>
+            <button id="naah-8">Remove</button>
+        </div>
+
+        <div id="bilagra-10">
+            <img src="Orochimaru.jpg" id="ambrodil-10">
+            <span id="naam-10">Orochimaru</span>
+            <button id="vagaate-9">Add Friend</button>
+            <button id="naah-9">Remove</button>
+        </div>
+
+        <div id="bilagra-11">
+            <img src="Rock Lee.jpg" id="ambrodil-11">
+            <span id="naam-11">Rock Lee</span>
+            <button id="vagaate-10">Add Friend</button>
+            <button id="naah-10">Remove</button>
+        </div>
+
+        <div id="bilagra-12">
+            <img src="Sai.jpg" id="ambrodil-12">
+            <span id="naam-12">Sai</span>
+            <button id="vagaate-11">Add Friend</button>
+            <button id="naah-11">Remove</button>
+        </div>
+
+        <div id="bilagra-13">
+            <img src="Shikamaru Nara.jpg" id="ambrodil-13">
+            <span id="naam-13">Shikamaru Nara</span>
+            <button id="vagaate-12">Add Friend</button>
+            <button id="naah-12">Remove</button>
+        </div>
+
+        <div id="bilagra-14">
+            <img src="Shino Aburame.jpg" id="ambrodil-14">
+            <span id="naam-14">Shino Aburame</span>
+            <button id="vagaate-13">Add Friend</button>
+            <button id="naah-13">Remove</button>
+        </div>
+
+        <div id="bilagra-15">
+            <img src="Temari.jpg" id="ambrodil-15">
+            <span id="naam-15">Temari</span>
+            <button id="vagaate-14">Add Friend</button>
+            <button id="naah-14">Remove</button>
+        </div>
+
+        <div id="bilagra-16">
+            <img src="Tobirama Senju.jpg" id="ambrodil-16">
+            <span id="naam-16">Tobirama Senju</span>
+            <button id="vagaate-15">Add Friend</button>
+            <button id="naah-15">Remove</button>
+        </div>
+
+        <div id="bilagra-17">
+            <img src="Yamato.jpg" id="ambrodil-17">
+            <span id="naam-17">Yamato</span>
+            <button id="vagaate-16">Add Friend</button>
+            <button id="naah-16">Remove</button>
+        </div>
+
+        <div id="bilagra-18">
+            <img src="Gojo.jpg" id="ambrodil-18">
+            <span id="naam-18">Gojo</span>
+            <button id="vagaate-17">Add Friend</button>
+            <button id="naah-17">Remove</button>
+        </div>
+
+        <div id="bilagra-19">
+            <img src="sukuna.jpg" id="ambrodil-19">
+            <span id="naam-19">sukuna</span>
+            <button id="vagaate-18">Add Friend</button>
+            <button id="naah-18">Remove</button>
+        </div>
+
+        <div id="bilagra-20">
+            <img src="Light.jpg" id="ambrodil-20">
+            <span id="naam-20">Light Yagami</span>
+            <button id="vagaate-19">Add Friend</button>
+            <button id="naah-19">Remove</button>
+        </div>
+
+        <div id="bilagra-21">
+            <img src="L.jpg" id="ambrodil-21">
+            <span id="naam-21">L</span>
+            <button id="vagaate-20">Add Friend</button>
+            <button id="naah-20">Remove</button>
+        </div>
+
+        <div id="bilagra-22">
+            <img src="Ryuk.jpg" id="ambrodil-22">
+            <span id="naam-22">Ryuk</span>
+            <button id="vagaate-21">Add Friend</button>
+            <button id="naah-21">Remove</button>
+        </div>
+
+        <div id="bilagra-23">
+            <img src="Kokushibo.jpg" id="ambrodil-23">
+            <span id="naam-23">Kokushibo</span>
+            <button id="vagaate-22">Add Friend</button>
+            <button id="naah-22">Remove</button>
+        </div>
+
+        <div id="bilagra-24">
+            <img src="Tanjiro.jpg" id="ambrodil-24">
+            <span id="naam-24">Tanjiro</span>
+            <button id="vagaate-23">Add Friend</button>
+            <button id="naah-23">Remove</button>
+        </div>
+
+        <div id="bilagra-25">
+            <img src="Zinestu.jpg" id="ambrodil-25">
+            <span id="naam-25">Zinestu</span>
+            <button id="vagaate-24">Add Friend</button>
+            <button id="naah-24">Remove</button>
+        </div>
+
+        <div id="bilagra-26">
+            <img src="Rengoko.jpg" id="ambrodil-26">
+            <span id="naam-26">Rengoko</span>
+            <button id="vagaate-25">Add Friend</button>
+            <button id="naah-25">Remove</button>
+        </div>
+
+        <div id="bilagra-27">
+            <img src="Nezuko.jpg" id="ambrodil-27">
+            <span id="naam-27">Nezuko</span>
+            <button id="vagaate-26">Add Friend</button>
+            <button id="naah-26">Remove</button>
+        </div>
+
+        <div id="bilagra-28">
+            <img src="Yorichi.jpg" id="ambrodil-28">
+            <span id="naam-28">Yorichi</span>
+            <button id="vagaate-27">Add Friend</button>
+            <button id="naah-27">Remove</button>
+        </div>
+
+        <div id="bilagra-29">
+            <img src="Muzan.jpg" id="ambrodil-29">
+            <span id="naam-29">Muzan</span>
+            <button id="vagaate-28">Add Friend</button>
+            <button id="naah-28">Remove</button>
+        </div>
+
+        <div id="bilagra-30">
+            <img src="Shinobu.jpg" id="ambrodil-30">
+            <span id="naam-30">Shinobu</span>
+            <button id="vagaate-29">Add Friend</button>
+            <button id="naah-29">Remove</button>
+        </div>
+
+        <div id="bilagra-31">
+            <img src="Tomiko.jpg" id="ambrodil-31">
+            <span id="naam-31">Tomiko</span>
+            <button id="vagaate-30">Add Friend</button>
+            <button id="naah-30">Remove</button>
+        </div>
+
+        <div id="bilagra-32">
+            <img src="Akaza.jpg" id="ambrodil-32">
+            <span id="naam-32">Akaza</span>
+            <button id="vagaate-32">Add Friend</button>
+            <button id="naah-32">Remove</button>
+        </div>
+
+        <div id="bilagra-33">
+            <img src="Tengen.jpg" id="ambrodil-33">
+            <span id="naam-33">Tengen</span>
+            <button id="vagaate-32">Add Friend</button>
+            <button id="naah-32">Remove</button>
+        </div>
+
+    </div>
+</body>
+
+</html>
